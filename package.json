@@ -5,7 +5,7 @@
   "description": "youtube clone",
   "main": "script.js",
   "scripts": {
-    "dev": "nodemon src/script.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/script.js"
   },
   "author": "Muhammad Attique",
   "license": "ISC",
