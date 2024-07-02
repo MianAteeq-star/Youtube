@@ -7,11 +7,15 @@ const app = express()
 app.get("/",(req, res)=>{
     res.send("welcome server is available")
 })
+const port = process.env.PORT || 4000
 
 connectDB()
-
-const port = process.env.PORT || 400
-app.listen(port,()=>{
-    console.log(`Server is running on port ${port}`)
- 
+.then(()=>{
+    app.listen(port,()=>{
+        console.log(`Server is running on port ${port}`)
+     
+    })
+}).catch((error)=>{
+console.log("Mongo db connection failed !! " , error)
 })
+
