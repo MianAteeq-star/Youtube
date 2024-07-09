@@ -1,8 +1,6 @@
-import express from "express"
 import "dotenv/config"
 import connectDB from "./db/mongoConnection.js"
-
-const app = express()
+import { app } from "./app.js"
 
 app.get("/",(req, res)=>{
     res.send("welcome server is available")
